@@ -1,5 +1,5 @@
 {% set name = "openskill" %}
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openskill-{{ version }}.tar.gz
-  sha256: 7f28a00961c364387ecf9eeda4e6eea76d9c0cf0890485f90ef4edad4c3865d5
+  sha256: 6dedb530aede41481bf9ff5b0190ca84799412ddcd8c0e3a9af246f989ef7f45
 
 build:
   number: 0
@@ -19,10 +19,10 @@ requirements:
   host:
     - pip
     - poetry-core >=1.0.0
-    - python >=3.6,<3.11
+    - python >=3.10
   run:
-    - python >=3.6,<3.11
-    - scipy >=1.8.0,<2.0.0
+    - python >=3.10
+    - scipy
 
 test:
   source_files:
