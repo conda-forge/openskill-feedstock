@@ -1,5 +1,5 @@
 {% set name = "openskill" %}
-{% set version = "2.2.0" %}
+{% set version = "2.4.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openskill-{{ version }}.tar.gz
-  sha256: 3d6b09b17c645d09a3beb5c80283fdc32b0a64c9198e5ac417d0434b935e507e
+  sha256: fc23f670cac52e5a12ee1e6b77a79f65809c83e6a6ea67dc0e46ce5a4f4251d9
 
 build:
   number: 0
