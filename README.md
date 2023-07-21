@@ -1,11 +1,11 @@
-About openskill
-===============
+About openskill-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openskill-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/OpenDebates/openskill.py
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openskill-feedstock/blob/main/LICENSE.txt)
 
 Summary: License-free implementation of Weng-Lin Bayesian ranking
 

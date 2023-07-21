@@ -1,5 +1,5 @@
 {% set name = "openskill" %}
-{% set version = "4.0.0" %}
+{% set version = "5.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openskill-{{ version }}.tar.gz
-  sha256: 064f5cb788dc99d7fb5f89a9cd0515e864a18ea2eaed8d4dc1e5ae1772d86c92
+  sha256: 62cb6d99d44603458ad8a529bc2174eee47f1c9aad3b4070c1c3bcd26b952cc5
 
 build:
   number: 0
@@ -17,10 +17,11 @@ build:
 
 requirements:
   host:
+    - pdm-backend
     - pip
-    - python >=3.10
+    - python ~=3.8
   run:
-    - python >=3.10
+    - python ~=3.8
 
 test:
   source_files:
@@ -33,7 +34,7 @@ test:
     - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
-    - pytest
+    - pytest ~=7.3
 
 about:
   home: https://github.com/OpenDebates/openskill.py
