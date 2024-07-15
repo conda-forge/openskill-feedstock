@@ -1,5 +1,5 @@
 {% set name = "openskill" %}
-{% set version = "5.1.1" %}
+{% set version = "6.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openskill-{{ version }}.tar.gz
-  sha256: e38d5a96f31edfa6d93383aaef3a2920584e6da7a719ae728b7133c75f4cada7
+  sha256: eee2d0b3c1648663a480cf4680654dfd12bdc749a96d611b1904e191f2632f62
 
 build:
   number: 0
@@ -19,9 +19,9 @@ requirements:
   host:
     - pdm-backend
     - pip
-    - python ~=3.8
+    - python ~=3.9
   run:
-    - python ~=3.8
+    - python ~=3.9
 
 test:
   source_files:
