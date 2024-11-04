@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openskill-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/openskill-{{ version }}.tar.gz
   sha256: 704e0e29452c94b41cdf020411ee6fcaf72c4eeb546f50f7266ba5a15d1bf821
 
 build:
@@ -17,11 +17,11 @@ build:
 
 requirements:
   host:
-    - pdm-backend
     - pip
-    - python ~=3.9
+    - python ~=3.10
+    - setuptools
   run:
-    - python ~=3.9
+    - python ~=3.10
 
 test:
   source_files:
