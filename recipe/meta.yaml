@@ -1,5 +1,5 @@
 {% set name = "openskill" %}
-{% set version = "6.0.0" %}
+{% set version = "6.0.1" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openskill-{{ version }}.tar.gz
-  sha256: eee2d0b3c1648663a480cf4680654dfd12bdc749a96d611b1904e191f2632f62
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/openskill-{{ version }}.tar.gz
+  sha256: 704e0e29452c94b41cdf020411ee6fcaf72c4eeb546f50f7266ba5a15d1bf821
 
 build:
   number: 0
@@ -17,24 +17,20 @@ build:
 
 requirements:
   host:
-    - pdm-backend
     - pip
-    - python ~=3.9
+    - python ~=3.10
+    - setuptools
   run:
-    - python ~=3.9
+    - python ~=3.10
 
 test:
-  source_files:
-    - tests
   imports:
     - openskill
     - openskill.models
   commands:
     - pip check
-    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
-    - pytest ~=7.3
 
 about:
   home: https://github.com/OpenDebates/openskill.py
