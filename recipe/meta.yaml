@@ -1,5 +1,6 @@
 {% set name = "openskill" %}
-{% set version = "6.0.1" %}
+{% set version = "6.0.2" %}
+{% set python_min = "3.10" %}
 
 
 package:
@@ -8,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/openskill-{{ version }}.tar.gz
-  sha256: 704e0e29452c94b41cdf020411ee6fcaf72c4eeb546f50f7266ba5a15d1bf821
+  sha256: 7241f6dcfffb3aa1be339fda479e608f35f127cce764e27df90a460733606d1d
 
 build:
   number: 0
@@ -18,10 +19,10 @@ build:
 requirements:
   host:
     - pip
-    - python ~=3.10
+    - python {{ python_min }}
     - setuptools
   run:
-    - python ~=3.10
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -31,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/OpenDebates/openskill.py
