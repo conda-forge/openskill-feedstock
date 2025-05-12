@@ -1,0 +1,45 @@
+schema_version: 1
+
+context:
+  name: openskill
+  version: 6.0.2
+  python_min: 3.10
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/openskill-${{ version }}.tar.gz
+  sha256: 7241f6dcfffb3aa1be339fda479e608f35f127cce764e27df90a460733606d1d
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - openskill
+        - openskill.models
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: License-free implementation of Weng-Lin Bayesian ranking
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/OpenDebates/openskill.py
+
+extra:
+  recipe-maintainers:
+    - thewchan
