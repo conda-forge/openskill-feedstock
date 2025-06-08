@@ -1,5 +1,5 @@
 {% set name = "openskill" %}
-{% set version = "6.1.0" %}
+{% set version = "6.1.1" %}
 {% set python_min = "3.10" %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/openskill-{{ version }}.tar.gz
-  sha256: fbb4dbff058908892df24fe0775abfddfa3222b83a96210605f5b93896174564
+  sha256: b53aea39b33b5a613507f171d2fbcc1ec4e01d4112fdf948d3311b641cecb1ce
 
 build:
   number: 0
