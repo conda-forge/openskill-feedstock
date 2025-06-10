@@ -3,7 +3,7 @@ About openskill-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openskill-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/OpenDebates/openskill.py
+Home: https://github.com/vivekjoshy/openskill.py
 
 Package license: MIT
 
