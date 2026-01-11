@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: openskill
-  version: "6.1.3"
+  version: "6.2.0"
   python_min: '3.10'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/openskill-${{ version }}.tar.gz
-  sha256: 8a97853c0c6fc1f706368528113396c083e7962a1534430d72e7e78425b38e00
+  sha256: 817c5192aaed489697a1703fc2a3f9ea84b4487b09d0c27fd270a04f08f13d67
 
 build:
   number: 0
